@@ -1,0 +1,306 @@
+local ScreenGui = Instance.new("ScreenGui")
+local maingui = Instance.new("Frame")
+local close = Instance.new("TextButton")
+local txt = Instance.new("TextLabel")
+local im = Instance.new("TextButton")
+local mt = Instance.new("TextButton")
+local ray = Instance.new("TextButton")
+local ground = Instance.new("TextButton")
+local lb = Instance.new("TextButton")
+local ky = Instance.new("TextButton")
+local vrson = Instance.new("TextLabel")
+local opengui = Instance.new("Frame")
+local open = Instance.new("TextButton")
+
+ScreenGui.Parent = game.CoreGui
+
+maingui.Name = "maingui"
+maingui.Parent = ScreenGui
+maingui.Active = true
+maingui.BackgroundColor3 = Color3.new(1, 0.666667, 0)
+maingui.BorderColor3 = Color3.new(1, 0.333333, 0)
+maingui.BorderSizePixel = 5
+maingui.Position = UDim2.new(0.268379748, 0, 0.353808373, 0)
+maingui.Size = UDim2.new(0, 559, 0, 252)
+maingui.Visible = false
+maingui.Active = true
+maingui.Draggable = true
+
+close.Name = "close"
+close.Parent = maingui
+close.BackgroundColor3 = Color3.new(1, 0.666667, 0)
+close.BorderColor3 = Color3.new(1, 0.333333, 0)
+close.BorderSizePixel = 5
+close.Position = UDim2.new(0.883720934, 0, 0, 0)
+close.Size = UDim2.new(0, 65, 0, 30)
+close.Font = Enum.Font.SourceSans
+close.Text = "X"
+close.TextColor3 = Color3.new(0, 0, 0)
+close.TextScaled = true
+close.TextSize = 14
+close.TextWrapped = true
+close.MouseButton1Down:connect(function()
+maingui.Visible = false
+opengui.Visible = true
+end)
+
+txt.Name = "txt"
+txt.Parent = maingui
+txt.BackgroundColor3 = Color3.new(1, 0.666667, 0)
+txt.BorderColor3 = Color3.new(1, 0.333333, 0)
+txt.BorderSizePixel = 5
+txt.Size = UDim2.new(0, 494, 0, 30)
+txt.Font = Enum.Font.SourceSans
+txt.Text = "By:  The Exploiter"
+txt.TextColor3 = Color3.new(0, 0, 0)
+txt.TextScaled = true
+txt.TextSize = 14
+txt.TextWrapped = true
+
+im.Name = "im"
+im.Parent = maingui
+im.BackgroundColor3 = Color3.new(1, 0.666667, 0)
+im.BorderColor3 = Color3.new(1, 0.333333, 0)
+im.BorderSizePixel = 5
+im.Position = UDim2.new(0.050089445, 0, 0.257936507, 0)
+im.Size = UDim2.new(0, 162, 0, 50)
+im.Font = Enum.Font.SourceSans
+im.Text = "Ice Mewtwo"
+im.TextColor3 = Color3.new(0, 0, 0)
+im.TextScaled = true
+im.TextSize = 14
+im.TextWrapped = true
+im.MouseButton1Down:connect(function()
+local pokemon = "Ice Mewtwo"
+local lvl     = "100"
+
+local Encrypt = function(CodeSource)
+local StringCode = '';
+for i = 1, #CodeSource do
+StringCode = StringCode ..string.char(48)..string.byte(string.sub(CodeSource,i,i));
+end
+return StringCode;
+end
+
+local pass = Encrypt(game.Players.LocalPlayer.Name..lvl..pokemon)
+
+game.ReplicatedStorage.REvents.Pokemon.iwillknowXD:InvokeServer(pokemon, game.Players.LocalPlayer.PokemonParty, lvl, true, true, pass)
+end)
+
+mt.Name = "mt"
+mt.Parent = maingui
+mt.BackgroundColor3 = Color3.new(1, 0.666667, 0)
+mt.BorderColor3 = Color3.new(1, 0.333333, 0)
+mt.BorderSizePixel = 5
+mt.Position = UDim2.new(0.40071556, 0, 0.257936507, 0)
+mt.Size = UDim2.new(0, 162, 0, 50)
+mt.Font = Enum.Font.SourceSans
+mt.Text = "Mewtwo"
+mt.TextColor3 = Color3.new(0, 0, 0)
+mt.TextScaled = true
+mt.TextSize = 14
+mt.TextWrapped = true
+mt.MouseButton1Down:connect(function()
+local pokemon = "Mewtwo"
+local lvl     = "100"
+
+local Encrypt = function(CodeSource)
+local StringCode = '';
+for i = 1, #CodeSource do
+StringCode = StringCode ..string.char(48)..string.byte(string.sub(CodeSource,i,i));
+end
+return StringCode;
+end
+
+local pass = Encrypt(game.Players.LocalPlayer.Name..lvl..pokemon)
+
+game.ReplicatedStorage.REvents.Pokemon.iwillknowXD:InvokeServer(pokemon, game.Players.LocalPlayer.PokemonParty, lvl, true, true, pass)
+end)
+
+ray.Name = "ray"
+ray.Parent = maingui
+ray.BackgroundColor3 = Color3.new(1, 0.666667, 0)
+ray.BorderColor3 = Color3.new(1, 0.333333, 0)
+ray.BorderSizePixel = 5
+ray.Position = UDim2.new(0.0500894189, 0, 0.59523809, 0)
+ray.Size = UDim2.new(0, 162, 0, 50)
+ray.Font = Enum.Font.SourceSans
+ray.Text = "Rayquaza"
+ray.TextColor3 = Color3.new(0, 0, 0)
+ray.TextScaled = true
+ray.TextSize = 14
+ray.TextWrapped = true
+ray.MouseButton1Down:connect(function()
+local pokemon = "Rayquaza"
+local lvl     = "100"
+
+local Encrypt = function(CodeSource)
+local StringCode = '';
+for i = 1, #CodeSource do
+StringCode = StringCode ..string.char(48)..string.byte(string.sub(CodeSource,i,i));
+end
+return StringCode;
+end
+
+local pass = Encrypt(game.Players.LocalPlayer.Name..lvl..pokemon)
+
+game.ReplicatedStorage.REvents.Pokemon.iwillknowXD:InvokeServer(pokemon, game.Players.LocalPlayer.PokemonParty, lvl, true, true, pass)
+end)
+
+ground.Name = "ground"
+ground.Parent = maingui
+ground.BackgroundColor3 = Color3.new(1, 0.666667, 0)
+ground.BorderColor3 = Color3.new(1, 0.333333, 0)
+ground.BorderSizePixel = 5
+ground.Position = UDim2.new(0.40071553, 0, 0.59523809, 0)
+ground.Size = UDim2.new(0, 162, 0, 50)
+ground.Font = Enum.Font.SourceSans
+ground.Text = "Groudon"
+ground.TextColor3 = Color3.new(0, 0, 0)
+ground.TextScaled = true
+ground.TextSize = 14
+ground.TextWrapped = true
+ground.MouseButton1Down:connect(function()
+local pokemon = "Groudon"
+local lvl     = "100"
+
+local Encrypt = function(CodeSource)
+local StringCode = '';
+for i = 1, #CodeSource do
+StringCode = StringCode ..string.char(48)..string.byte(string.sub(CodeSource,i,i));
+end
+return StringCode;
+end
+
+local pass = Encrypt(game.Players.LocalPlayer.Name..lvl..pokemon)
+
+game.ReplicatedStorage.REvents.Pokemon.iwillknowXD:InvokeServer(pokemon, game.Players.LocalPlayer.PokemonParty, lvl, true, true, pass)
+end)
+
+lb.Name = "lb"
+lb.Parent = maingui
+lb.BackgroundColor3 = Color3.new(1, 0.666667, 0)
+lb.BorderColor3 = Color3.new(1, 0.333333, 0)
+lb.BorderSizePixel = 5
+lb.Position = UDim2.new(0.749552786, 0, 0.257936507, 0)
+lb.Size = UDim2.new(0, 110, 0, 50)
+lb.Font = Enum.Font.SourceSans
+lb.Text = "Legendary Birds"
+lb.TextColor3 = Color3.new(0, 0, 0)
+lb.TextScaled = true
+lb.TextSize = 14
+lb.TextWrapped = true
+lb.MouseButton1Down:connect(function()
+local pokemon = "Articuno"
+local lvl     = "100"
+
+local Encrypt = function(CodeSource)
+local StringCode = '';
+for i = 1, #CodeSource do
+StringCode = StringCode ..string.char(48)..string.byte(string.sub(CodeSource,i,i));
+end
+return StringCode;
+end
+
+local pass = Encrypt(game.Players.LocalPlayer.Name..lvl..pokemon)
+
+game.ReplicatedStorage.REvents.Pokemon.iwillknowXD:InvokeServer(pokemon, game.Players.LocalPlayer.PokemonParty, lvl, true, true, pass)
+
+local pokemon = "Zapdos"
+local lvl     = "100"
+
+local Encrypt = function(CodeSource)
+local StringCode = '';
+for i = 1, #CodeSource do
+StringCode = StringCode ..string.char(48)..string.byte(string.sub(CodeSource,i,i));
+end
+return StringCode;
+end
+
+local pass = Encrypt(game.Players.LocalPlayer.Name..lvl..pokemon)
+
+game.ReplicatedStorage.REvents.Pokemon.iwillknowXD:InvokeServer(pokemon, game.Players.LocalPlayer.PokemonParty, lvl, true, true, pass)
+
+local pokemon = "Moltres"
+local lvl     = "100"
+
+local Encrypt = function(CodeSource)
+local StringCode = '';
+for i = 1, #CodeSource do
+StringCode = StringCode ..string.char(48)..string.byte(string.sub(CodeSource,i,i));
+end
+return StringCode;
+end
+
+local pass = Encrypt(game.Players.LocalPlayer.Name..lvl..pokemon)
+
+game.ReplicatedStorage.REvents.Pokemon.iwillknowXD:InvokeServer(pokemon, game.Players.LocalPlayer.PokemonParty, lvl, true, true, pass)
+end)
+
+ky.Name = "ky"
+ky.Parent = maingui
+ky.BackgroundColor3 = Color3.new(1, 0.666667, 0)
+ky.BorderColor3 = Color3.new(1, 0.333333, 0)
+ky.BorderSizePixel = 5
+ky.Position = UDim2.new(0.749552786, 0, 0.59523809, 0)
+ky.Size = UDim2.new(0, 110, 0, 50)
+ky.Font = Enum.Font.SourceSans
+ky.Text = "Kyurem"
+ky.TextColor3 = Color3.new(0, 0, 0)
+ky.TextScaled = true
+ky.TextSize = 14
+ky.TextWrapped = true
+ky.MouseButton1Down:connect(function()
+local pokemon = "Kyurem"
+local lvl     = "100"
+
+local Encrypt = function(CodeSource)
+local StringCode = '';
+for i = 1, #CodeSource do
+StringCode = StringCode ..string.char(48)..string.byte(string.sub(CodeSource,i,i));
+end
+return StringCode;
+end
+
+local pass = Encrypt(game.Players.LocalPlayer.Name..lvl..pokemon)
+
+game.ReplicatedStorage.REvents.Pokemon.iwillknowXD:InvokeServer(pokemon, game.Players.LocalPlayer.PokemonParty, lvl, true, true, pass)
+end)
+
+vrson.Name = "vrson"
+vrson.Parent = maingui
+vrson.BackgroundColor3 = Color3.new(1, 0.666667, 0)
+vrson.BorderColor3 = Color3.new(1, 0.333333, 0)
+vrson.BorderSizePixel = 5
+vrson.Position = UDim2.new(0.821109116, 0, 0.928571284, 0)
+vrson.Size = UDim2.new(0, 100, 0, 17)
+vrson.Font = Enum.Font.SourceSans
+vrson.Text = "Verson: 0.01"
+vrson.TextColor3 = Color3.new(0, 0, 0)
+vrson.TextScaled = true
+vrson.TextSize = 14
+vrson.TextWrapped = true
+
+opengui.Name = "opengui"
+opengui.Parent = ScreenGui
+opengui.BackgroundColor3 = Color3.new(1, 0.666667, 0)
+opengui.BorderColor3 = Color3.new(1, 0.333333, 0)
+opengui.BorderSizePixel = 5
+opengui.Position = UDim2.new(0.463954329, 0, 0.949631453, 0)
+opengui.Size = UDim2.new(0, 100, 0, 29)
+
+open.Name = "open"
+open.Parent = opengui
+open.BackgroundColor3 = Color3.new(1, 1, 1)
+open.BackgroundTransparency = 1
+open.Size = UDim2.new(0, 100, 0, 29)
+open.Font = Enum.Font.SourceSans
+open.Text = "Open"
+open.TextColor3 = Color3.new(0, 0, 0)
+open.TextScaled = true
+open.TextSize = 14
+open.TextWrapped = true
+open.MouseButton1Down:connect(function()
+maingui.Visible = true
+opengui.Visible = false
+end)
